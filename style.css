@@ -1,3 +1,13 @@
 .badge {
   @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
 }
+
+ .modal {
+            display: none;
+        }
+        .modal.open {
+            display: flex;
+        }
+        [data-status="Pendente"] { color: #f97316; }
+        [data-status="Em Andamento"] { color: #0ea5e9; }
+        [data-status="Concluída"] { color: #22c55e; }
