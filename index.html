@@ -5,16 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VolunBoard — Gestão de Ações Comunitárias</title>
   <meta name="color-scheme" content="light dark" />
-
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="bg-gray-50 text-gray-800">
      
-    
+    <header class="bg-white border-b sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="Início VolunBoard">
+        <div class="w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold">VB</div>
+        <div>
+          <div class="font-semibold">VolunBoard</div>
+          <div class="text-xs text-gray-500">Gestão de Ações Comunitárias</div>
+        </div>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6">
+        <a href="#" class="text-sm text-gray-700 hover:text-primary-700">Dashboard</a>
+        <a href="#" class="text-sm text-gray-700 hover:text-primary-700">Relatórios</a>
+        <a href="#" class="text-sm text-gray-700 hover:text-primary-700">Sobre</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="btnExport" class="px-3 py-1.5 rounded-md border text-sm hover:bg-gray-50">Cadastre-se</button>
+        <button id="btnImport" class="px-3 py-1.5 rounded-md bg-primary-600 text-white text-sm hover:bg-primary-700">Importar</button>
+        <input id="importFile" type="file" accept="application/json" class="hidden" />
+      </div>
+    </div>
+  </header>
+
   <script src="app.js"></script>
 </body>
 </html>
