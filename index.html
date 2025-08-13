@@ -28,7 +28,7 @@
       </nav>
       <div class="flex items-center gap-3">
         <button id="btnExport" class="px-3 py-1.5 rounded-md border text-sm hover:bg-gray-50">Cadastre-se</button>
-        <button id="btnImport" class="px-3 py-1.5 rounded-md bg-primary-600 text-white text-sm hover:bg-primary-700">Importar</button>
+        <button id="btnImport" class="px-3 py-1.5 rounded-md bg-primary-600 text-white text-sm hover:bg-primary-700">Login</button>
         <input id="importFile" type="file" accept="application/json" class="hidden" />
       </div>
     </div>
@@ -41,6 +41,16 @@
     <footer class="mt-8 text-center text-xs text-gray-500">
       Feito por Mayara · VoluntárioBoard — site em HTML + Tailwind + JS (localStorage)
     </footer>
+
+ 
+  <div id="modal-container"></div>
+    <div id="modal" class="fixed inset-0 bg-gray-900 bg-opacity-50 hidden flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6">
+        <h2 class="text-xl font-semibold mb-4">Modal Title</h2>
+        <p class="text-gray-700 mb-4">This is a modal content area.</p>
+        <button id="closeModal" class="px-4 py-2 bg-primary-600 text-white rounded hover:bg-primary-700">Fechar</button>
+        </div>
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden bg-gray-900 text-white text-sm px-4 py-2 rounded-full shadow-lg"></div>
   </main>
   <script src="app.js"></script>
 </body>
