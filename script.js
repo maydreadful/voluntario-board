@@ -84,18 +84,35 @@ function editarAcao(id) {
     const acao = acoes.find(a => a.id === id);
     if (acao) {
         abrirModal(acao);
+        
     }
 }
 
 // EVENT LISTENERS
-document.getElementById('btn-abrir-modal').addEventListener('click', () => abrirModal());
+// Adiciona um listener para fechar o modal quando clicar no botão 'x' ou fora da área branca
 document.getElementById('btn-fechar-modal').addEventListener('click', fecharModal);
 
 modal.addEventListener('click', (e) => {
+    // Verifica se o clique foi diretamente no plano de fundo escuro do modal
     if (e.target.id === 'modal-acao') {
         fecharModal();
-    }
+    }    
 });
+
+// Fechar modal ao clicar no X
+document.getElementById('btn-fechar-modal').onclick = function() {
+    document.getElementById('modal-acao').style.display = 'none';
+};
+
+// Opcional: abrir modal ao clicar no botão "Adicionar Ação"
+document.getElementById('btn-abrir-modal').onclick = function() {
+    document.getElementById('modal-acao').style.display = 'flex';
+};
+
+// Opcional: esconder modal ao carregar a página
+window.onload = function() {
+    document.getElementById('modal-acao').style.display = 'none';
+};
 
 formAcao.addEventListener('submit', (e) => {
     e.preventDefault();
